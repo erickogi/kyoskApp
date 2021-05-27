@@ -27,9 +27,9 @@ Following are the endpoints are implemented:
 | Query  | `GET`       | `/search?metadata.key=value`
 
 ### Samples
-![alt text](https://github.com/erickogi/kysokApp/blob/master/image1.jpg?raw=true)
-![alt text](https://github.com/erickogi/kysokApp/blob/master/image2.jpg?raw=true)
-![alt text](https://github.com/erickogi/kysokApp/blob/master/image3.jpg?raw=true)
+![alt text](https://github.com/erickogi/kysokApp/blob/master/image1.png?raw=true)
+![alt text](https://github.com/erickogi/kysokApp/blob/master/image2.png?raw=true)
+![alt text](https://github.com/erickogi/kysokApp/blob/master/image3.png?raw=true)
 
 
  
