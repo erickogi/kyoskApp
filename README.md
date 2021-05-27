@@ -24,6 +24,30 @@ swagger-ui:2.6.1
 1. Run app
 2. Open http://localhost:8080/kyosk//swagger-ui.html
 
+##DB
+
+##mysql
+
+>CREATE DATABASE `config` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+>CREATE TABLE `config` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `metadata` json DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+Change the credentils to match your db credentials in application.properties
+
+##H2 Embedded DB
+Uncomment
+##H2 - To use embedded db
+#spring.datasource.url=jdbc:h2:file:~/kyoskDB
+#spring.datasource.driverClassName=org.h2.Driver
+#spring.datasource.username=ek
+#spring.datasource.password=password
+#spring.h2.console.enabled=true
+
+
 ### Samples
 ![alt text](https://github.com/erickogi/kysokApp/blob/master/image1.png?raw=true)
 ![alt text](https://github.com/erickogi/kysokApp/blob/master/image2.png?raw=true)
