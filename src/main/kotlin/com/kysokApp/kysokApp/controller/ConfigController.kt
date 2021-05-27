@@ -25,8 +25,6 @@ class ConfigController {
     @PostMapping("/configs")
     @ApiOperation("Create a Config")
     fun create(@RequestBody config: Config): RestResponse? {
-        println("create")
-        println("config")
        return configService?.createConfig(config)
     }
     @GetMapping("/configs/{name}")
@@ -51,8 +49,6 @@ class ConfigController {
     @GetMapping("/search")
     @ApiOperation("Search for Configs by metadata key-values")
     fun search(metadata: Config): RestResponse?{
-        println("search")
-        println(metadata.toString())
         return configService?.searchConfig(metadata)
     }
 }
