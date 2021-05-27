@@ -52,7 +52,7 @@ internal class ConfigServiceTest {
         `when`(configRepo?.findAll()).thenReturn(configs)
 
         val allConfigs: RestResponse? = configService?.listConfigs()
-        assertThat(allConfigs?.body?.size).isGreaterThanOrEqualTo(1)
+        assertThat((allConfigs?.body as List<*>).size).isGreaterThanOrEqualTo(1)
 
     }
 
