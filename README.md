@@ -29,6 +29,7 @@ swagger-ui:2.6.1
 ##mysql
 
 >CREATE DATABASE `config` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
 >CREATE TABLE `config` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `metadata` json DEFAULT NULL,
@@ -36,16 +37,15 @@ swagger-ui:2.6.1
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+
+
 Change the credentils to match your db credentials in application.properties
 
 ##H2 Embedded DB
-Uncomment
-##H2 - To use embedded db
-#spring.datasource.url=jdbc:h2:file:~/kyoskDB
-#spring.datasource.driverClassName=org.h2.Driver
-#spring.datasource.username=ek
-#spring.datasource.password=password
-#spring.h2.console.enabled=true
+
+Uncomment the commented H2 Conneection properties application.properties
+
+Note that H2 Does not have JSON_CONTAINS ability and thus search wont work . For this speecific api only MYSQL db will work.
 
 
 ### Samples
