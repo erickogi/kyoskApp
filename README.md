@@ -17,12 +17,16 @@ Following are the endpoints are implemented:
 | Delete | `DELETE`    | `/configs/{name}`
 | Query  | `GET`       | `/search?metadata.key=value`
 
-##Kyosk Configs APIs
+##APP BULD AND RUN PROCESS > pre containerization
+
+
+1. Clone the repository
+2. Create the DB and table or auto create using schema.sql in resources folder
+3. Run app
+4. Open http://localhost:8080/kyosk//swagger-ui.html
+
 To View apis documentation 
 swagger-ui:2.6.1
-
-1. Run app
-2. Open http://localhost:8080/kyosk//swagger-ui.html
 
 ##DB
 
