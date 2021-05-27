@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kysokapp
+  namespace: kyoskapp
+  labels:
+    app: kysokapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kysokapp
+  template:
+    metadata:
+      labels:
+        app: kysokapp
+    spec:
+      containers:
+        - name: kysokapp
+          image: kysokapp
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kysokapp
+  namespace: kyoskapp
+spec:
+  ports:
+    - nodePort: 32000
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: kysokapp
+  type: LoadBalancer
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: kysokapp
+  namespace: kyoskapp
+spec:
+  hosts:
+    - '*'
+  gateways:
+    - kysokapp-gateway
+  http:
+    -
+      match:
+        - uri:
+            prefix: /kysokapp
+      route:
+        - destination:
+            host: kysokapp.kysokapp.svc.cluster.local
+            port:
+              number: 8080
