@@ -17,11 +17,17 @@ Following are the endpoints are implemented:
 | Delete | `DELETE`    | `/configs/{name}`
 | Query  | `GET`       | `/search?metadata.key=value`
 
+##Kyosk Configs APIs
+To View apis documentation 
+swagger-ui:2.6.1
+
+1. Run app
+2. Open http://localhost:8080/kyosk//swagger-ui.html
+
 ### Samples
 ![alt text](https://github.com/erickogi/kysokApp/blob/master/image1.png?raw=true)
 ![alt text](https://github.com/erickogi/kysokApp/blob/master/image2.png?raw=true)
 ![alt text](https://github.com/erickogi/kysokApp/blob/master/image3.png?raw=true)
-
 
 
 
