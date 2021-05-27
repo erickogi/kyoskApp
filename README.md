@@ -1,5 +1,5 @@
-# kysokApp
-Kysok Interview test project
+# kyosk App
+kyosk Interview test project
 
 The project tests creation of a HTTP service that handles crud operations for configs.
 This operations have to satisfy certain requirments
@@ -90,13 +90,13 @@ Excute kyoskapp-gateway.yml
 
 >docker build -t kysokapp .
 
-8. Deploy Location -> (kysokApp -> kysokapp.yml)
+8. Deploy Location -> (kyoskApp -> kyoskapp.yml)
 
->kubectl apply -f kysokapp.yml
+>kubectl apply -f kyoskapp.yml
 
 9. Forward port 
 
->kubectl port-forward services/kysokapp 8080:8080 -n kysokapp
+>kubectl port-forward services/kyoskapp 8080:8080 -n kysokapp
 
 
 
