@@ -59,7 +59,7 @@ Note that H2 Does not have JSON_CONTAINS ability and thus search wont work . For
 
 
 
-### Enviromet & Setup
+### Containerization  & Virtualization Enviromet & Setup
 
 1. Docker 
  
