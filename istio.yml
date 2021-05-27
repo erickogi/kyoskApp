@@ -1,0 +1,33 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: istio-ingressgateway-internal
+  namespace: istio-system
+  labels:
+    app: istio-ingressgateway
+    istio: ingressgateway
+    release: istio
+spec:
+  ports:
+    - name: status-port
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 32200
+    - name: http2
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 31390
+    - name: mongodb
+      protocol: TCP
+      port: 27017
+      targetPort: 27017
+      nodePort: 32033
+  selector:
+    app: istio-ingressgateway
+    istio: ingressgateway
+    release: istio
+  type: LoadBalancer
+  sessionAffinity: None
+  externalTrafficPolicy: Cluster
