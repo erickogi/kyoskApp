@@ -6,16 +6,16 @@ This operations have to satisfy certain requirments
 
 
 ### Endpoints
-Following are the endpoints are implemented:
+Following are the endpoints implemented:
 
 | Name   | Method      | URL
 | ---    | ---         | ---
-| List   | `GET`       | `/configs`
-| Create | `POST`      | `/configs`
-| Get    | `GET`       | `/configs/{name}`
-| Update | `PUT/PATCH` | `/configs/{name}`
-| Delete | `DELETE`    | `/configs/{name}`
-| Query  | `GET`       | `/search?metadata.key=value`
+| List   | `GET`       | `api/configs`
+| Create | `POST`      | `api/configs`
+| Get    | `GET`       | `api/configs/{name}`
+| Update | `PUT/PATCH` | `api/configs/{name}`
+| Delete | `DELETE`    | `api/configs/{name}`
+| Query  | `GET`       | `api/search?metadata.key=value`
 
 ##APP BULD AND RUN PROCESS > pre containerization
 
